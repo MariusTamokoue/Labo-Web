@@ -11,28 +11,32 @@ html, body {
 }
 
 header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: rgba(18, 18, 18, 0.7);
     background-attachment: fixed;
 }
 
 .flex-header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin: 0px 20px 0px 80px;
 }
 
-.header-logo {
-    position: left;
+.header-logo img {
+    width: 30%;
+    height: 30%;
 }
 
 .header-link {
     width: 100%;
-    position: right;
 }
 
 .header-link li {
-    display: inline-block;
+    display: inline;
     margin-right: 30px;
 }
 
@@ -60,6 +64,7 @@ header {
 
 .flex-hero {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin: 0px 20px 0px 80px;
@@ -106,10 +111,14 @@ header {
 /* MAIN */
 main {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .flex-main {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin: 0px 80px 0px 80px;
@@ -192,6 +201,7 @@ blockquote {
     background-color: transparent;
     padding: 10px 50px 10px 50px;
     font-size: 18px;
+    font-weight: bold;
     transition: ease-in-out;
     transition-duration: 0.2s;
 }
@@ -213,86 +223,4 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-
-@media screen and (max-width: 768px) {
-    .flex-header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .header-logo img {
-        width: 80%;
-        margin-bottom: 20px;
-    }
-
-    .header-link ul {
-        text-align: center;
-        padding: 0;
-    }
-
-    .header-link li {
-        margin: 10px 0;
-    }
-
-    .flex-hero {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .hero-right img {
-        width: 100%; 
-        height: auto; 
-    }
-
-    .flex-main {
-        flex-direction: column;
-        padding: 20px;
-        margin: 0;
-        width: 100%;
-    }
-
-    .main-content img {
-        width: 100%;
-        height: auto; 
-    }
-
-    .flex-quote div {
-        width: 90%; 
-    }
-
-    .contact-content {
-        flex-direction: column;
-        padding: 20px;
-        width: 90%;
-    }
-
-    .contact-left,
-    .contact-right {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    footer {
-        font-size: 16px; 
-    }
-}
-
-
-@media screen and (max-width: 1024px) {
-    .flex-header {
-        margin: 0 10px;
-    }
-
-    .flex-main {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .main-content {
-        width: 45%; 
-        margin: 10px;
-    }
 }
